@@ -30,6 +30,7 @@
     height: 50px;
     width: 50px; 
     margin: 5px; 
+    outline: none;
 } 
 
 .operators { 
@@ -48,6 +49,7 @@
     height: 50px;
     width: 50px; 
     margin: 5px; 
+    outline: none;
 } 
 
 .specials {
@@ -63,6 +65,7 @@
     height: 50px;
     width: 50px; 
     margin: 5px; 
+    outline: none;
 } 
 
 .calcDisplay {
