@@ -1,3 +1,82 @@
 .container {
-    background-color: red;
+    background-color: rgb(189, 15, 15);
+    width: 50%;
+    height: 500px;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center; 
+    width: 20%; 
+    flex-wrap: wrap;
+}
+
+.numbers1 button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px; 
+    margin: 5px; 
+} 
+
+.operators { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    width: 20%; 
+    flex-wrap: wrap; 
+    position: relative;
+    left: 190px;
+    bottom: 300px;
+} 
+
+.operators1 button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px; 
+    margin: 5px; 
+} 
+
+.specials {
+    display: flex; 
+    justify-content: center; 
+    width: 20%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.specials1 button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px; 
+    margin: 5px; 
+} 
+
+.calcDisplay {
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    height: 50px;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.calcDisplay p {
+    font-size: 1.5rem;
+    margin: 10px;
 }
