@@ -19,14 +19,15 @@ function App() {
   const [secondNumber, setSecondNumber] = useState("")
   const [mathOperator, setMathOperator] = useState("")
   const [specials, setSpecials] = useState("")
-  const [calculation, setCalculation] = useState(0)
+  const [calculation, setCalculation] = useState("")
 
-  const initialState = {
-    firstNumber: "",
-    secondNumber: "",
-    mathOperator: "",
-    calculation: ""
+  const clearScreen = () => {
+    setFirstNumber("");
+    setSecondNumber("");
+    setMathOperator("");
+    setCalculation("")
   }
+
 
   const addInput = (newNumber) => {
     
@@ -43,11 +44,7 @@ function App() {
     setMathOperator(newOperator)
   }
 
-  const clearScreen = (newState) => {
-    if (specials === "C") {
-      newState({...initialState})
-    }
-  }
+  
 
   return (
     <div className="container">
