@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
-const Display = () => {
+const Display = (props) => {
+  const [number, setNumber] = useState(0)
+  console.log(props)
   return <div className="calcDisplay">{/* Display any props data here */}
-    <p>0</p>
-  
+    <p>{props.firstNumber}</p>
   </div>;
 };
 

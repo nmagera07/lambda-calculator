@@ -1,11 +1,12 @@
 import React from "react";
 
 const OperatorButton = (props) => {
+  console.log("operator", props.item)
   return (
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
       <div className="operators1">
-      <button>{props.button.char}</button>
+      <button onClick={() => props.addInput(props.item.value)}>{props.item.char}</button>
       </div>
     </>
   );
