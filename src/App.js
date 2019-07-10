@@ -18,7 +18,15 @@ function App() {
   const [firstNumber, setFirstNumber] = useState("")
   const [secondNumber, setSecondNumber] = useState("")
   const [mathOperator, setMathOperator] = useState("")
-  const [finalResult, setFinalResult] = useState(0)
+  const [specials, setSpecials] = useState("")
+  const [calculation, setCalculation] = useState(0)
+
+  const initialState = {
+    firstNumber: "",
+    secondNumber: "",
+    mathOperator: "",
+    calculation: ""
+  }
 
   const addInput = (newNumber) => {
     
@@ -29,23 +37,28 @@ function App() {
 }
 
   const addOperator = newOperator => {
-    if (mathOperator === "=") {
-      setFinalResult(eval(`${firstNumber} ${mathOperator} ${secondNumber}`))
+    if (newOperator === "=") {
+      setCalculation(eval(`${firstNumber} ${mathOperator} ${secondNumber}`))
     }
     setMathOperator(newOperator)
   }
 
+  const clearScreen = (newState) => {
+    if (specials === "C") {
+      newState({...initialState})
+    }
+  }
 
   return (
     <div className="container">
       <Logo />
-      <Display firstNumber={firstNumber}/>
+      <Display firstNumber={firstNumber} secondNumber={secondNumber} mathOperator={mathOperator} calculation={calculation} />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
         
-        <Specials />
+        <Specials clearScreen={clearScreen}/>
         <Numbers set={firstNumber} addInput={addInput}/>
-        <Operators set={mathOperator} addInput={addInput}/>
+        <Operators set={mathOperator} addInput={addInput} addOperator={addOperator}/>
         
       </div>
     </div>

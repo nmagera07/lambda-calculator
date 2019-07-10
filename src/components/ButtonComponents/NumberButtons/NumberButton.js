@@ -6,7 +6,7 @@ const NumberButton = (props) => {
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
       <div className="numbers1">
-      <button onClick={() => props.addInput(props.button)}>{props.button}</button>
+      <button onClick={() => props.addInput(props.number)}>{props.number}</button>
       
       </div>
     </>
