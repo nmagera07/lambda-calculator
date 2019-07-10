@@ -21,11 +21,13 @@ function App() {
   const [specials, setSpecials] = useState("")
   const [calculation, setCalculation] = useState("")
 
-  const clearScreen = () => {
+  const clearScreen = (newState) => {
+    if (newState === "C") {
     setFirstNumber("");
     setSecondNumber("");
     setMathOperator("");
     setCalculation("")
+    }
   }
 
 
@@ -41,7 +43,7 @@ function App() {
     if (newOperator === "=") {
       setCalculation(eval(`${firstNumber} ${mathOperator} ${secondNumber}`))
     }
-    setMathOperator(newOperator)
+    setMathOperator(newOperator) 
   }
 
   
